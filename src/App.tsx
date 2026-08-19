@@ -24,7 +24,7 @@ function App() {
 
   return <div className="app-shell">
     <aside className={menuOpen ? 'sidebar open' : 'sidebar'}>
-      <div className="brand-row"><div className="brand-mark"><Sparkles size={17} /></div><span>LifeOS</span><button className="close-menu" onClick={() => setMenuOpen(false)}><X size={18} /></button></div>
+      <div className="brand-row"><img className="brand-logo" src="/lifeos-logo.svg" alt="LifeOS" /><span>LifeOS</span><button className="close-menu" onClick={() => setMenuOpen(false)}><X size={18} /></button></div>
       <div className="workspace-label">PERSONAL WORKSPACE</div>
       <nav>{navItems.map(({ label, icon: Icon }) => <button key={label} className={active === label ? 'nav-item active' : 'nav-item'} onClick={() => { setActive(label); setMenuOpen(false) }}><Icon size={18} /><span>{label}</span></button>)}</nav>
       <div className="sidebar-bottom"><button className="nav-item"><Bell size={18} /><span>Reminders</span></button><button className="nav-item"><Moon size={18} /><span>Appearance</span></button><div className="profile-mini"><div className="avatar">HK</div><div><strong>My workspace</strong><small>Personal account</small></div></div></div>
